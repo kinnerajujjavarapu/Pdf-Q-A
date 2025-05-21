@@ -93,7 +93,7 @@ st.markdown(
 st.title("Ask your PDF")
 # uploading the PDF
 pdf=st.file_uploader("Upload your PDF",type="pdf")
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "your_api_key"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 #extracting the text of the pdf by looping through the pages
 if pdf is not None:
